@@ -69,7 +69,7 @@ class ManufacturerListView(CarListView):
 
 class DriverListView(CarListView):
     model = Driver
-    paginate_by = 12
+    paginate_by = 2
     queryset = Driver.objects.all()
 
     def get_queryset(self):
