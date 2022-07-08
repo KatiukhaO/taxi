@@ -55,7 +55,7 @@ class CarListView(LoginRequiredMixin, generic.ListView):
 class ManufacturerListView(CarListView):
     model = Manufacturer
     context_object_name = "manufacturer_list"
-    paginate_by = 3
+    paginate_by = 8
     queryset = Manufacturer.objects.all()
 
     def get_queryset(self):
@@ -69,7 +69,7 @@ class ManufacturerListView(CarListView):
 
 class DriverListView(CarListView):
     model = Driver
-    paginate_by = 2
+    paginate_by = 8
     queryset = Driver.objects.all()
 
     def get_queryset(self):
