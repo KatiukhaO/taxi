@@ -6,8 +6,8 @@ Django project for managing cars, drivers, manufacturers in taxi service
 
 [project on heroku](here)
 
-* username:user
-* password:user1234
+* username:dima
+* password:1144Dima
 
 ## Installing / Getting started
 

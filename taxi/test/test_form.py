@@ -1,5 +1,4 @@
 from django.test import TestCase
-import pytest
 
 from taxi.forms import DriverForm, DriverLicenseUpdateForm
 

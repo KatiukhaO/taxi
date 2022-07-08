@@ -2,7 +2,7 @@ from django.contrib.auth import get_user_model
 from django.test import TestCase
 from django.urls import reverse
 
-from taxi.models import Car, Manufacturer, Driver
+from taxi.models import Driver
 
 DRIVER_LIST_URL = reverse("taxi:driver-list")
 REDIRECT_URL_USER_NOT_LOGIN = "/accounts/login/?next=/drivers/"
