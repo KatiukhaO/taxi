@@ -46,6 +46,12 @@ class DriverForm(forms.ModelForm):
         return license_number
 
 
+class DriverUpdateForm(DriverForm):
+    class Meta:
+        model = Driver
+        fields = ["username", "first_name",
+                  "last_name", "license_number"]
+
 class DriverLicenseUpdateForm(DriverForm):
     class Meta:
         model = Driver

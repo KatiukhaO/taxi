@@ -7,7 +7,7 @@ from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .forms import DriverForm, CarForm, \
-    DriverLicenseUpdateForm, SearchForm
+    DriverLicenseUpdateForm, SearchForm, DriverUpdateForm
 from .models import Driver, Car, Manufacturer
 
 
@@ -135,7 +135,7 @@ class DriverCreateView(LoginRequiredMixin, generic.CreateView):
 
 class DriverUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Driver
-    form_class = DriverForm
+    form_class = DriverUpdateForm
     success_url = reverse_lazy("taxi:driver-list")
 
 
