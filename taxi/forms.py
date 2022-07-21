@@ -52,6 +52,7 @@ class DriverUpdateForm(DriverForm):
         fields = ["username", "first_name",
                   "last_name", "license_number"]
 
+
 class DriverLicenseUpdateForm(DriverForm):
     class Meta:
         model = Driver

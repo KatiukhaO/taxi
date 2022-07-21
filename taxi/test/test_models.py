@@ -19,7 +19,8 @@ class TestModels(TestCase):
                                                       password="test1234")
 
         self.assertEqual(str(driver),
-                         f"{driver.username} ({driver.first_name} {driver.last_name})")
+                         f"{driver.username} "
+                         f"({driver.first_name} {driver.last_name})")
 
     def test_str_car(self):
         manufacturer = Manufacturer.objects.create(name="Tesla",
@@ -35,11 +36,13 @@ class TestModels(TestCase):
         last_name = "Surname"
         password = "test1234"
         license_number = "QWE12345"
-        driver = get_user_model().objects.create_user(username=username,
-                                                      first_name=first_name,
-                                                      last_name=last_name,
-                                                      password=password,
-                                                      license_number=license_number)
+        driver = get_user_model(
+
+        ).objects.create_user(username=username,
+                              first_name=first_name,
+                              last_name=last_name,
+                              password=password,
+                              license_number=license_number)
 
         self.assertEqual(driver.username, username)
         self.assertEqual(driver.first_name, first_name)

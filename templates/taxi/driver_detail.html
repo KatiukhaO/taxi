@@ -10,7 +10,6 @@
   <p><strong>License number:</strong> {{ driver.license_number }}</p>
     <button class="btn btn-outline-success"><a style="color: black; text-decoration: none" href="{% url 'taxi:license_update' pk=driver.pk %}">edit license number</a></button>
     <p></p>
-  <p><strong>Is staff:</strong> {{ driver.is_staff }}</p>
 
   <div class="ml-3">
     <h2>Cars</h2>

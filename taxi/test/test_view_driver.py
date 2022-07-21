@@ -34,7 +34,6 @@ class PrivateDriversListTest(TestCase):
         )
 
     def test_retrieve_drivers(self):
-
         response = self.client.get(DRIVER_LIST_URL)
         drivers = Driver.objects.all()
 
@@ -56,9 +55,8 @@ class PrivateDriversListTest(TestCase):
 
     def test_driver_update_view(self):
         new_license = {"license_number": "ZXC12345"}
-        url = reverse("taxi:driver_update", args=[self.driver.id,])
+        url = reverse("taxi:driver_update", args=[self.driver.id, ])
         response = self.client.post(path=url, data=new_license)
         update_driver = get_user_model().objects.get(id=self.driver.id)
 
         self.assertEqual(response.status_code, 200)
-        # self.assertEqual(update_driver.license_number, new_license["license_number"])

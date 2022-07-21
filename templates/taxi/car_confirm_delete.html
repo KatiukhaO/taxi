@@ -1,3 +1,7 @@
 {% extends "base_confirm_delete.html" %}
 
 {% block item %}{{ car.model }}{% endblock %}
+
+{% block cencel %}
+        <button class="btn btn-outline-success"><a style="color: black; text-decoration: none" href="{% url "taxi:car-detail" pk=car.pk %}">Cancel</a></button>
+{% endblock %}

@@ -1,3 +1,7 @@
 {% extends "base_confirm_delete.html" %}
 
 {% block item %}{{ manufacturer.name }}{% endblock %}
+
+{% block cencel %}
+        <button class="btn btn-outline-success"><a style="color: black; text-decoration: none" href="{% url "taxi:manufacturer-list" %}">Cancel</a></button>
+{% endblock %}
